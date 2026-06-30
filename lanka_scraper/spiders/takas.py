@@ -23,6 +23,7 @@ class TakasSpider(scrapy.Spider):
     }
 
     def start_requests(self):
+        print("###########################Starting Takas Spider with Playwright bypass...")
         yield scrapy.Request(
             url="https://takas.lk/", 
             callback=self.parse,
